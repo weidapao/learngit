@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery实现轮播</title>
+	<style>
+	#banner{
+		border: 1px solid black;
+		width:478px;
+		height: 286px;
+		margin: 200px auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#banner_bg{
+		position: absolute;
+		bottom: 0;
+		background-color: #ddd;
+		width: 478px;
+		height: 30px;
+	}
+	#banner_info{
+		position: absolute;
+		bottom: 3px;
+	}
+	#banner ul{
+		position: absolute;
+		bottom: 3px;
+		margin: 0;
+		padding: 0;
+		right: 3px;
+		border:1px solid white;
+	}
+	#banner ul li{
+		float: left;
+		display: block;
+		list-style-type: none;
+		
+		margin: 0 1px;
+		padding:0 6px;
+		color: white;
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	<div id="banner"> 
+      <div id="banner_bg"></div><!--标题背景-->
+      <div id="banner_info">第一张图片</div><!--标题-->
+      <ul>
+      <li class="on">1</li>
+      <li>2</li>
+      <li id="pigu">3</li>
+      <li>4</li>
+      </ul>
+      <div id="banner_list">
+      <a ><img src="imgs/p1.jpg" title="橡树小屋的blog" alt="橡树小屋的blog"/></a>
+      <a ><img src="imgs/p5.jpg" title="橡树小屋的blog" hidden alt="橡树小屋的blog"/></a>
+      <a ><img src="imgs/p3.jpg" title="橡树小屋的blog" hidden alt="橡树小屋的blog"/></a>
+      <a ><img src="imgs/p4.jpg" title="橡树小屋的blog" hidden alt="橡树小屋的blog"/></a>
+      </div>
+    </div>
+</body>
+</html>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var list=$("#banner li");
+	var imglist=$('img');
+	var title=$("li");
+	$(title[0]).click(function(){
+		alert(33);
+	});
+	// $("#banner li").click(function() {
+	// 		var i= $(this).text();
+			
+	// 		$(this).click(function(){
+	// 		$(this).css('background','#900');
+	// 		for(var k=0;k<imglist.length;k++){
+	// 			imglist[k].hidden=true;
+	// 	    }
+	// 	    imglist[i-1].hidden=false;
+
+	// 	    })
+
+	// 	});
+
+});
+</script>
